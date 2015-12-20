@@ -1,0 +1,43 @@
+﻿#helpdeskPanel{
+    margin: 80px auto 0 auto;
+    width:500px;
+
+}
+#helpdeskForm{
+    background-color:#e5dfdf;
+}
+
+#helpdeskLoginIconPicture{
+    display: table;
+    margin: 0 auto;
+    padding-top:20px;
+}
+#helpdeskHeader p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+    font-size:30px;
+}
+.problemListControl{
+    font-family:'Comic Sans MS';
+    font-size:20px;
+}
+
+#helpdeskForm td{
+    margin:0;
+    padding:8px;
+}
+.adressEmailContainer{
+    font-family: 'Comic Sans MS'; padding: 0; margin: 0;
+}
+.adressEmailContainer td {
+    padding:0; 
+ }
+.ContinueControl{
+    font-family: 'Comic Sans MS';
+    font-size:20px;
+}
+.ResultControl{
+    font-size:20px;
+    padding:10px;
+
+}

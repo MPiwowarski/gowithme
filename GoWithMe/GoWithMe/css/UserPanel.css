@@ -1,0 +1,34 @@
+﻿#userPanel{
+    margin: 0 auto 0 auto;
+    
+}
+
+#userPanel{
+    float:left;
+}
+#userDataPanel
+{
+    margin: 0 auto 0 auto;
+    background-color:#eae7e7;
+    width:600px;
+}
+
+#userDataPanel table td{
+    /*border:solid black 1px;*/
+    padding: 0px 10px 10px 10px;
+}
+
+
+.userPanelFields{
+    font-size:20px;
+    width:300px;
+}
+
+.UserDataLabels{
+    font-size:20px;
+    font-family:'Comic Sans MS';
+}
+
+#AcceptButton{
+    width:305px;
+}

@@ -1,0 +1,48 @@
+﻿#offerRidePanel{
+    margin: 0 auto 0 auto;
+    background-color:#eae7e7;
+}
+
+#offerRidePanel{
+    float:left;
+}
+#offerRideData
+{
+    margin: 0 auto 0 auto;
+    
+    width:600px;
+}
+
+#offerRideData table td{
+    /*border:solid black 1px;*/
+    padding: 0px 10px 10px 10px;
+}
+
+
+.offerRidePanelFields{
+    font-size:20px;
+    width:300px;
+}
+
+.offerRideDataLabels{
+    font-size:20px;
+    font-family:'Comic Sans MS';
+}
+
+#AcceptButton{
+    width:305px;
+}
+
+#rideOffertIcon{
+    width:280px;
+    height:280px;
+    margin-top: 70px;
+    margin-right:20px;
+ 
+}
+
+#offerRideDescriptionControl
+{
+    width:100%;
+}
+

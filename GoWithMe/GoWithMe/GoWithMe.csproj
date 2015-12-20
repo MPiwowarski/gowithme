@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4608FBCF-3B7F-41E4-B49D-F648A4DE35C2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoWithMe</RootNamespace>
+    <AssemblyName>GoWithMe</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.4.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Recaptcha, Version=1.0.5.0, Culture=neutral, PublicKeyToken=9afc4d65b28c38c2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Recaptcha\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddUserImage.aspx" />
+    <Content Include="CreationRideOffert.aspx" />
+    <Content Include="css\AddUserImage.css" />
+    <Content Include="css\CreationRideOffert.css" />
+    <Content Include="css\HelpdeskPanel.css" />
+    <Content Include="css\LoginForm.css" />
+    <Content Include="css\LoginPanel.css" />
+    <Content Include="css\OffertsPanel.css" />
+    <Content Include="css\Registration.css" />
+    <Content Include="css\UserPanel.css" />
+    <Content Include="HelpdeskLogin.aspx" />
+    <Content Include="Home2.aspx" />
+    <Content Include="Images\AddUserImage\ZasadyZamieszczaniaZdjec.bmp" />
+    <Content Include="Images\CreationRideOffert\CreationRideOffertIcon.png" />
+    <Content Include="Images\HelpdeskLoginPanel\helpdeskIcon.png" />
+    <Content Include="Images\LoginPanel\HeadIcon.jpg" />
+    <Content Include="Images\UserPanel\UserPanelImage.png" />
+    <Content Include="img\TerazZawszeBaner.png" />
+    <Content Include="LoginPanel.aspx" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="OffertsPanel.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="BaseSite.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\Home.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\Calendar.jpg" />
+    <Content Include="Images\Calendar2.jpg" />
+    <Content Include="Images\Calendar3.jpg" />
+    <Content Include="Images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Images\ui-icons_222222_256x240.png" />
+    <Content Include="Images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="img\logo4.png" />
+    <Content Include="img\tapeta3.png" />
+    <Content Include="jQueryFiles\jquery-1.6.4.min.js" />
+    <Content Include="jQueryFiles\jquery-ui-1.8.16.custom.css" />
+    <Content Include="jQueryFiles\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="Recaptcha\Recaptcha.dll" />
+    <Content Include="Registration.aspx" />
+    <Content Include="Registration2.aspx" />
+    <Content Include="Scripts\HomeCalendar.js" />
+    <Content Include="Scripts\OfferYourRideButton.js" />
+    <Content Include="UserControls\SearchForm\Scripts\UserControlsSearchEngine.js" />
+    <Content Include="UserControls\SearchForm\ControlTemplates\GoWithMe.SearchForm\SearchForm_SearchEngine.ascx" />
+    <Content Include="UserControls\SearchForm\Layouts\GoWithMe.SerchForm\SearchForm.css" />
+    <Content Include="UserControls\UserPanelMenu\ControlTemplates\GoWithMe.UserPanelMenu\UserPanelMenu_Menu.ascx" />
+    <Content Include="UserPanel.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddUserImage.aspx.cs">
+      <DependentUpon>AddUserImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUserImage.aspx.designer.cs">
+      <DependentUpon>AddUserImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSite.Master.cs">
+      <DependentUpon>BaseSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseSite.Master.designer.cs">
+      <DependentUpon>BaseSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CreationRideOffert.aspx.cs">
+      <DependentUpon>CreationRideOffert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreationRideOffert.aspx.designer.cs">
+      <DependentUpon>CreationRideOffert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HelpdeskLogin.aspx.cs">
+      <DependentUpon>HelpdeskLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HelpdeskLogin.aspx.designer.cs">
+      <DependentUpon>HelpdeskLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home2.aspx.cs">
+      <DependentUpon>Home2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home2.aspx.designer.cs">
+      <DependentUpon>Home2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPanel.aspx.cs">
+      <DependentUpon>LoginPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPanel.aspx.designer.cs">
+      <DependentUpon>LoginPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="OffertsPanel.aspx.cs">
+      <DependentUpon>OffertsPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OffertsPanel.aspx.designer.cs">
+      <DependentUpon>OffertsPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration2.aspx.cs">
+      <DependentUpon>Registration2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration2.aspx.designer.cs">
+      <DependentUpon>Registration2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchForm\ControlTemplates\GoWithMe.SearchForm\SearchForm_SearchEngine.ascx.cs">
+      <DependentUpon>SearchForm_SearchEngine.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchForm\ControlTemplates\GoWithMe.SearchForm\SearchForm_SearchEngine.ascx.designer.cs">
+      <DependentUpon>SearchForm_SearchEngine.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchForm\Data\ISearchFormItem.cs" />
+    <Compile Include="UserControls\SearchForm\Data\SearchFormItem.cs" />
+    <Compile Include="UserControls\SearchForm\Presenter\ISearchFormPresenter.cs" />
+    <Compile Include="UserControls\SearchForm\Presenter\SearchFormPresenter.cs" />
+    <Compile Include="UserControls\SearchForm\View\ISearchFormView.cs" />
+    <Compile Include="UserControls\UserPanelMenu\ControlTemplates\GoWithMe.UserPanelMenu\UserPanelMenu_Menu.ascx.cs">
+      <DependentUpon>UserPanelMenu_Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserPanelMenu\ControlTemplates\GoWithMe.UserPanelMenu\UserPanelMenu_Menu.ascx.designer.cs">
+      <DependentUpon>UserPanelMenu_Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel.aspx.cs">
+      <DependentUpon>UserPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel.aspx.designer.cs">
+      <DependentUpon>UserPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\IRegistrationForm.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="UserControls\UserPanelMenu\Data\" />
+    <Folder Include="UserControls\UserPanelMenu\Layouts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoWithMe.Model\GoWithMe.Model.csproj">
+      <Project>{09b1e3ad-2879-42c6-bcbf-a0eb28443863}</Project>
+      <Name>GoWithMe.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5585</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:23545/GoWithMe/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

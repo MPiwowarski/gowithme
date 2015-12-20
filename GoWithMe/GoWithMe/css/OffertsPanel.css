@@ -1,0 +1,28 @@
+﻿#searchResult{
+    margin: 0 auto 0 auto;
+    margin-top:10px;
+    width:600px;
+    float:left;
+    border:red 1px solid;
+
+}
+
+.searchResultTable{
+    border:1px solid black;
+}
+
+.searchResultTable li
+{
+        text-decoration: none;
+}
+
+
+.searchResultTable td{
+    border:1px solid #d4d4d4;
+}
+.userDataColumn, .offertDataColumn
+{
+
+    font-size:20px;
+    font-family:'Comic Sans MS';
+}

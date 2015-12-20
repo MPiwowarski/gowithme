@@ -1,0 +1,42 @@
+﻿#addImagePanel{
+    margin: 0 auto 0 auto;
+    background-color:#eae7e7;
+    height:700px;
+    width:100%;
+}
+
+
+#uploadImgPanel
+{
+    margin: 0 auto 0 auto;
+    
+    width:600px;
+    float:left;
+}
+
+#uploadImgPanel img{
+    margin: 0 auto 20px 60px;
+
+}
+
+#uploadImgPanel p{
+    padding-top:10px;
+    padding-bottom:20px;
+    margin:20px;
+}
+
+#addImagePanel table
+{
+    margin-left:60px;
+}
+#actuallImage
+{
+    padding-top:10px;
+
+}
+.actualImg{
+    width:250px;
+    height:220px;
+
+
+}

@@ -1,0 +1,48 @@
+﻿#SearchForm_SearchEngine_rideSearch {
+    float:left;
+    border-bottom: 1px #e9e4e4 solid;
+}
+
+#SearchForm_SearchEngine_rideSearch ul {
+  float: right;
+  margin: 3px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#SearchForm_SearchEngine_rideSearch li {
+  float: left;
+  display: inline;
+ 
+  color: #bbb;
+  margin: 0 0 0 16px;
+  padding: 0;
+}
+#SearchForm_SearchEngine_rideSearch #SearchForm_SearchEngine_rideSearchSearchRideBtnControl{
+    margin-top:2px;
+}
+
+
+#SearchForm_SearchEngine_offerRide
+{
+    background-color:orange;
+    font-family:'Comic Sans MS';
+    font-size:20px;
+    height:40px;
+}
+
+#SearchForm_SearchEngine_offerRide:hover{
+       background-color:#01294f;
+    /*background-color:darkorange;*/
+}
+
+.SearchButton
+{
+    margin-top:12px;
+    padding-bottom:10px;
+    font-family:'Comic Sans MS';
+     font-size:20px;
+    
+
+    height:40px;
+}
