@@ -60,7 +60,7 @@
 
             <div id="overview" style="">
                 <h1 style="float: left">Znajdź przejazd!</h1>
-                <asp:Button ID="offerRide" runat="server" Text="Sam zaoferuj przejazd!" Style="float: right" />
+                <asp:Button ID="offerRide" runat="server" Text="Sam zaoferuj przejazd!" Style="float: right" OnClick="offerRide_Click" />
                 
                 <uc1:SearchForm_SearchEngine runat="server" ID="SearchForm_SearchEngine" />
             </div>

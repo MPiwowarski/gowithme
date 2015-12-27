@@ -33,5 +33,23 @@ namespace GoWithMe.Model.Extras
             return RideDate.Add(time);
 
         }
+        /// <summary>
+        /// convertin polish letters: ą,ć,ę,ń,ó,ł,ż to english letters a,c,e,n,o,l,z
+        /// </summary>
+        /// <param name="phrase"></param>
+        /// <returns></returns>
+        public string ConvertGivenPhrase(string phrase)
+        {
+            phrase = phrase.ToLower();
+            phrase = phrase.Replace('ą', 'a');
+            phrase = phrase.Replace('ć', 'c');
+            phrase = phrase.Replace('ę', 'e');
+            phrase = phrase.Replace('ń', 'n');
+            phrase = phrase.Replace('ó', 'o');
+            phrase = phrase.Replace('ł', 'l');
+            phrase = phrase.Replace('ż', 'z');
+
+            return phrase;            
+        }
     }
 }

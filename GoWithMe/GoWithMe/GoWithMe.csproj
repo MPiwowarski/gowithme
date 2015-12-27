@@ -85,7 +85,6 @@
     <Content Include="css\Registration.css" />
     <Content Include="css\UserPanel.css" />
     <Content Include="HelpdeskLogin.aspx" />
-    <Content Include="Home2.aspx" />
     <Content Include="Images\AddUserImage\ZasadyZamieszczaniaZdjec.bmp" />
     <Content Include="Images\CreationRideOffert\CreationRideOffertIcon.png" />
     <Content Include="Images\HelpdeskLoginPanel\helpdeskIcon.png" />
@@ -96,7 +95,6 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="OffertsPanel.aspx" />
     <Content Include="packages.config" />
-    <Content Include="BaseSite.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -133,7 +131,6 @@
     <Content Include="jQueryFiles\jquery-ui-1.8.16.custom.min.js" />
     <Content Include="Recaptcha\Recaptcha.dll" />
     <Content Include="Registration.aspx" />
-    <Content Include="Registration2.aspx" />
     <Content Include="Scripts\HomeCalendar.js" />
     <Content Include="Scripts\OfferYourRideButton.js" />
     <Content Include="UserControls\SearchForm\Scripts\UserControlsSearchEngine.js" />
@@ -151,13 +148,6 @@
     <Compile Include="AddUserImage.aspx.designer.cs">
       <DependentUpon>AddUserImage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BaseSite.Master.cs">
-      <DependentUpon>BaseSite.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BaseSite.Master.designer.cs">
-      <DependentUpon>BaseSite.Master</DependentUpon>
-    </Compile>
     <Compile Include="CreationRideOffert.aspx.cs">
       <DependentUpon>CreationRideOffert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +158,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GWMExtras\GwmExtras.cs" />
     <Compile Include="HelpdeskLogin.aspx.cs">
       <DependentUpon>HelpdeskLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -181,13 +172,6 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home2.aspx.cs">
-      <DependentUpon>Home2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home2.aspx.designer.cs">
-      <DependentUpon>Home2.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPanel.aspx.cs">
       <DependentUpon>LoginPanel.aspx</DependentUpon>
@@ -214,13 +198,6 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Registration2.aspx.cs">
-      <DependentUpon>Registration2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registration2.aspx.designer.cs">
-      <DependentUpon>Registration2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\SearchForm\ControlTemplates\GoWithMe.SearchForm\SearchForm_SearchEngine.ascx.cs">
       <DependentUpon>SearchForm_SearchEngine.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,8 +207,9 @@
     </Compile>
     <Compile Include="UserControls\SearchForm\Data\ISearchFormItem.cs" />
     <Compile Include="UserControls\SearchForm\Data\SearchFormItem.cs" />
-    <Compile Include="UserControls\SearchForm\Presenter\ISearchFormPresenter.cs" />
-    <Compile Include="UserControls\SearchForm\Presenter\SearchFormPresenter.cs" />
+    <Compile Include="UserControls\SearchForm\Presenter\DefaultPresenter\SearchFormPresenter.cs" />
+    <Compile Include="UserControls\SearchForm\Presenter\GlobalSearchEnginePresenter.cs" />
+    <Compile Include="UserControls\SearchForm\Presenter\Home\SearchFormPresenter.cs" />
     <Compile Include="UserControls\SearchForm\View\ISearchFormView.cs" />
     <Compile Include="UserControls\UserPanelMenu\ControlTemplates\GoWithMe.UserPanelMenu\UserPanelMenu_Menu.ascx.cs">
       <DependentUpon>UserPanelMenu_Menu.ascx</DependentUpon>

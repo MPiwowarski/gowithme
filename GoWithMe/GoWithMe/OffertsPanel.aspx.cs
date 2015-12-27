@@ -1,5 +1,5 @@
 ﻿using GoWithMe.SearchForm.View;
-using GoWithMe.SearchForm.Presenter;
+using GoWithMe.SearchForm.Presenter.DefaultPresenter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using GoWithMe.View;
 using GoWithMe.Model.Repo;
-
+using GoWithMe.GWMExtras;
 namespace GoWithMe
 {
     public partial class OffertsPanel : System.Web.UI.Page
@@ -30,7 +30,7 @@ namespace GoWithMe
             _searchFormView = (ISearchFormView)SearchForm_SearchEngine;
             _searchFormPresenter = new SearchFormPresenter(_searchFormView);
 
-            var searchEngineItems = _searchFormPresenter.GetSearchData;
+            var searchEngineItems = _searchFormPresenter.GetSearchData();
             _searchFormView.PlaceFrom = searchEngineItems.PlaceFrom;
             _searchFormView.PlaceTo = searchEngineItems.PlaceTo;
             _searchFormView.DateRideCtrl = searchEngineItems.DateRide.ToString();
@@ -57,13 +57,13 @@ namespace GoWithMe
 
         private void ShowSearchEngineResults()
         {
-            var searchEngineItems = _searchFormPresenter.GetSearchData;
+            var searchEngineItems = _searchFormPresenter.GetSearchData();
             IDataRepository repo = new DataRepository();
 
             var result = repo.GetSearchEngineResult(searchEngineItems.PlaceFrom, searchEngineItems.PlaceTo, searchEngineItems.DateRide);
 
             //TODO;
-            //1. Dopisac nazwy kolumn
+            //1. Dopisac nazwy kolumne
             //2. Ostylować wszystko
             //3. Dopisac nr telefonu i description
             //4. Zoptymalizowac wyszukiwanie na zmniejszenie wszystkich wpisanych liter
@@ -82,18 +82,32 @@ namespace GoWithMe
                 if (img != null)
                 {
                     string base64String = Convert.ToBase64String(img, 0, img.Length);
-                    html += "<td><ul class=\"userDataColumn\"> <li> <img src=\"data:image/png;base64," + base64String+ "\"/>" + "</li>";            
+                    html += "<td><ul class=\"userDataCollumn\"> <li> <img class=\"offertUserImage\" src=\"data:image/png;base64," + base64String+ "\"/>" + "</li>";            
                 }
-                html += "<li>" + item.UserName + "</li>";
-                html += "<li>"+ item.UserSurname + "</li></td>";
-
+                else
+                {
+                    html += "<td><ul class=\"userDataCollumn\"> <li> <img class=\"offertUserImage\" src=\"Images/UserPanel/UserPanelImage.png\" />" + "</li>";
+                }
+                html += "<td><ul class=\"userDataCollumn\"><li>" + item.UserName + "</li>";
+                html += "<li>"+ item.UserSurname + "</li></ul></td>";
+//C:\Users\Lenovo W520\Documents\Visual Studio 2015\Projects\GoWithMe\GoWithMe\Images\UserPanel\UserPanelImage.png
                 //------------------------------- OFFERT DATA --------------------------------------------
 
-                html += "<td><ul class=\"offertDataColumn\"> <li>" + item.RideDate + "</li>";
-                html += "<li style=\"color:red; \">" + item.FromPlace + "</li>";
-                html += "<li>" + item.ToPlace + "</li></td>";
+                html += "<td><ul class=\"offertDataCollumn\"> <li>" + item.RideDate.ToString("dd-mm-yyyy")+ "</li>";
+                html += "<li style=\"color:red; \">" + item.FromPlace + " --> " + item.ToPlace + "</li>";
+                html += "<li> Car model:" + item.CarModel + "</li></td>";
+
+                //------------------------ PHONE NUMEBR CONTACT -------------------------------------------
+                html += "<td><ul class=\"phoneNumberCollumn\"> <li>" + "Telefon kontaktowy:"  + "</li>";
+                html += "<li>" + GwmExtras.ChangeNumberFormat(item.PhoneNumber) +  "</li></td>";
+
+                //------------------------ DESCRIPTION ----------------------------------------------------
+                html += "<td><ul> <li>" + "Opis przejazdu:" + "</li>";
+                html += "<li class=\"descriptionCollumn\">" + item.Description + "</li></td>";
 
                 //------------------------ PRICE AND NUMBER OF SITS ---------------------------------------
+                html += "<td><ul> <li class=\"priceCollumn\">" + "Cena: " + item.Price + " zł " + "</li>";
+                html += "<li> Ilość miejsc: " + item.NumberOfSits + "</li></td>";
 
 
                 html += "</tr>";
@@ -101,6 +115,8 @@ namespace GoWithMe
             html += "</table>";
             searchResult.InnerHtml = html;
         }
+
+        
     }
 }
 

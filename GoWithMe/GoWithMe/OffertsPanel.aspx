@@ -20,7 +20,6 @@
     <form id="form1" runat="server">
         <div>
             <div id="wrapper">
-
                 <div id="logo">
                     <h1>Go With Me
                     </h1>
