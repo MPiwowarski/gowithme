@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginPanel.aspx.cs" Inherits="GoWithMe.LoginPanel" %>
 
+<%@ Register Src="~/UserControls/MainMenu/ControlTemplates/GoWithMe.MainMenu/MainMenu_Menu.ascx" TagPrefix="uc1" TagName="MainMenu_Menu" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -27,19 +30,7 @@
                 </h1>
             </div>
 
-            <div id="nav">
-                <ul>
-                    <li><a href="Home.aspx">Home</a></li>
-                    <li>/</li>
-                    <li><a href="Registration.aspx">Rejestracja</a></li>
-                    <li>/</li>
-                    <li><a href="#" >Zaloguj się</a></li>
-                    <li>/</li>
-                    <li><a href="#">Kontakt</a></li>
-                    <li>/</li>
-                    <li><a href="#">Pomoc</a></li>
-                </ul>
-            </div>
+         <uc1:MainMenu_Menu runat="server" ID="MainMenu_Menu" />
 
 
 

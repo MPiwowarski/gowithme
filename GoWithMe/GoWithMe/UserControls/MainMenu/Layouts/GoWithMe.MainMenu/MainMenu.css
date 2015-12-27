@@ -1,0 +1,30 @@
+﻿#MainMenu{
+    float:right;
+    font-size:20px;
+}
+#MainMenu ul{
+    list-style: none;
+}
+#MainMenu ul li{
+    text-decoration:none;
+    padding-left:10px;
+    display:inline;
+}
+
+#MainMenu li a {
+  color: #111;
+  text-decoration: none;
+  padding: 7px 9px;
+  background: #faeda4;
+}
+
+#MainMenu li a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: #01294f;
+}
+.LogoutMenuItemClass{
+  background: #faeda4;
+  font-size:22px;
+  
+}

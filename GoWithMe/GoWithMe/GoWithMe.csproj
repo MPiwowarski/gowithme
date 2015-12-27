@@ -133,6 +133,8 @@
     <Content Include="Registration.aspx" />
     <Content Include="Scripts\HomeCalendar.js" />
     <Content Include="Scripts\OfferYourRideButton.js" />
+    <Content Include="UserControls\MainMenu\ControlTemplates\GoWithMe.MainMenu\MainMenu_Menu.ascx" />
+    <Content Include="UserControls\MainMenu\Layouts\GoWithMe.MainMenu\MainMenu.css" />
     <Content Include="UserControls\SearchForm\Scripts\UserControlsSearchEngine.js" />
     <Content Include="UserControls\SearchForm\ControlTemplates\GoWithMe.SearchForm\SearchForm_SearchEngine.ascx" />
     <Content Include="UserControls\SearchForm\Layouts\GoWithMe.SerchForm\SearchForm.css" />
@@ -198,6 +200,13 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MainMenu\ControlTemplates\GoWithMe.MainMenu\MainMenu_Menu.ascx.cs">
+      <DependentUpon>MainMenu_Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainMenu\ControlTemplates\GoWithMe.MainMenu\MainMenu_Menu.ascx.designer.cs">
+      <DependentUpon>MainMenu_Menu.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SearchForm\ControlTemplates\GoWithMe.SearchForm\SearchForm_SearchEngine.ascx.cs">
       <DependentUpon>SearchForm_SearchEngine.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -232,6 +241,10 @@
     <Folder Include="bin\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="UserControls\MainMenu\Data\" />
+    <Folder Include="UserControls\MainMenu\Presenter\" />
+    <Folder Include="UserControls\MainMenu\Scripts\" />
+    <Folder Include="UserControls\MainMenu\View\" />
     <Folder Include="UserControls\UserPanelMenu\Data\" />
     <Folder Include="UserControls\UserPanelMenu\Layouts\" />
   </ItemGroup>
