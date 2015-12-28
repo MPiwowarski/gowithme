@@ -20,7 +20,7 @@
     <script type="text/javascript" src="jQueryFiles/jquery-1.6.4.min.js"></script>
     <script type="text/javascript" src="jQueryFiles/jquery-ui-1.8.16.custom.min.js"></script>
 
-    <title>Panel urzytkownika</title>
+    <title>User panel</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -45,7 +45,7 @@
                             <table>
                                 <tr>
                                     <td colspan="2">
-                                        <h2>Dane użytkownika</h2>
+                                        <h2>User data</h2>
                                     </td>
                                 </tr>
                                 <tr>
@@ -72,7 +72,7 @@
 
                                 <tr style="border-top: solid black 3px">
                                     <td>
-                                        <label class="UserDataLabels">Imię </label>
+                                        <label class="UserDataLabels">Name </label>
                                     </td>
                                     <td>
                                         <asp:TextBox ID="nameControl" runat="server" CssClass="userPanelFields">
@@ -83,7 +83,7 @@
 
                                 <tr>
                                     <td>
-                                        <label class="UserDataLabels">Nazwisko </label>
+                                        <label class="UserDataLabels">Surname </label>
                                     </td>
                                     <td>
                                         <asp:TextBox ID="surnameControl" runat="server" CssClass="userPanelFields">
@@ -93,7 +93,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label class="UserDataLabels">Hasło</label>
+                                        <label class="UserDataLabels">Password</label>
                                     </td>
                                     <td>
                                         <asp:TextBox ID="passwordControl" runat="server" CssClass="userPanelFields"
@@ -105,7 +105,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label class="UserDataLabels">Potwierdź hasło</label>
+                                        <label class="UserDataLabels">Confirm password</label>
                                     </td>
                                     <td>
                                         <asp:TextBox ID="confirmPasswordControl" runat="server" TextMode="Password"
@@ -114,7 +114,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label class="UserDataLabels">Numer telefonu </label>
+                                        <label class="UserDataLabels">Phone number </label>
                                     </td>
                                     <td>
                                         
@@ -127,7 +127,7 @@
                                 <tr>
                                     <td></td>
                                     <td colspan="2">
-                                        <asp:Button ID="AcceptBtnControl" runat="server" Text="Zapisz zmiany" CssClass="AcceptButton" OnClick="AcceptBtnControl_Click" />
+                                        <asp:Button ID="AcceptBtnControl" runat="server" Text="Save changes" CssClass="AcceptButton" OnClick="AcceptBtnControl_Click" />
 
                                     </td>
                                 </tr>
@@ -152,17 +152,7 @@
 
         </div>
 
-        <div id="footer">
-            <ul>
-                <li><a href="#">Najtańsze przejazdy</a></li>
-                <li>/</li>
-                <li><a href="#">Newsy</a></li>
-                <li>/</li>
-                <li><a href="#">FAQ</a></li>
-                <li>/</li>
-                <li><a href="#">Mapa strony</a></li>
-            </ul>
-        </div>
+        
 
     </form>
 </body>

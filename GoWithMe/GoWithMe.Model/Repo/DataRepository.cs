@@ -18,62 +18,6 @@ namespace GoWithMe.Model.Repo
 
         public static GoWithMeDBContext DBContext = new GoWithMeDBContext();
 
-        //public List<searchEngineResult> GetSearchEngineResult(string fromPlace, string toPlace, DateTime? rideDate)
-        //{
-
-        //    List<searchEngineResult> result = DBContext.Users
-        //       .Join(DBContext.OfferingRide,
-        //       u => u.ID,
-        //       o => o.tblUserId,
-        //       (u, o) => new { u, o }).
-
-        //       Where(s => s.o.FromPlace == fromPlace && s.o.ToPlace == toPlace).
-        //       Select(s => new searchEngineResult
-        //       {
-        //           UserId = s.u.ID,
-        //           UserName = s.u.Name,
-        //           UserSurname = s.u.Surname,
-        //           RideDate = s.o.RideDate,
-        //           FromPlace = s.o.FromPlace,
-        //           ToPlace = s.o.ToPlace,
-        //           CarModel = s.o.CarModel,
-        //           Price = s.o.Price,
-        //           NumberOfSits = s.o.NumberOfSits,
-        //           PhoneNumber = s.u.PhoneNumber,
-        //           Description=s.o.OffertDescription
-
-        //       }).ToList()
-        //       .Join(DBContext.Images,
-        //       ser => ser.UserId,
-        //       i => i.UserId,
-        //       (ser, i) => new { ser, i }).
-        //       Where(s => DBContext.Images.Select(x=>x.UserId).Contains(s.i.UserId)).
-        //       Select(s => new searchEngineResult
-        //       {
-        //           UserId = s.ser.UserId,
-        //           UserName = s.ser.UserName,
-        //           UserSurname = s.ser.UserSurname,
-        //           RideDate = s.ser.RideDate,
-        //           FromPlace = s.ser.FromPlace,
-        //           ToPlace = s.ser.ToPlace,
-        //           CarModel = s.ser.CarModel,
-        //           Price = s.ser.Price,
-        //           NumberOfSits = s.ser.NumberOfSits,         
-        //           PhoneNumber=s.ser.PhoneNumber,
-        //           Description=s.ser.Description,
-        //           Image = s.i.Image
-        //       }).ToList();
-
-        //    int iterator = 0;
-        //    foreach(var x in result)
-        //    {
-        //        x.Lp += iterator;
-        //    }
-
-        //    return result;
-
-        //}
-
         public List<searchEngineResult> GetSearchEngineResult(string fromPlace, string toPlace, DateTime? rideDate)
         {
 

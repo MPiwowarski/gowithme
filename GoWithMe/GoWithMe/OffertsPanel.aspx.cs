@@ -35,10 +35,6 @@ namespace GoWithMe
             _searchFormView.PlaceTo = searchEngineItems.PlaceTo;
             _searchFormView.DateRideCtrl = searchEngineItems.DateRide.ToString();
 
-            //PlaceFromControl.Text = SearchData.PlaceFrom;
-            //PlaceToControl.Text = SearchData.PlaceTo;
-            //rideDate.Text = SearchData.DateRide.ToString();
-
         }
 
         private SearchFormPresenter _searchFormPresenter;
@@ -61,13 +57,6 @@ namespace GoWithMe
             IDataRepository repo = new DataRepository();
 
             var result = repo.GetSearchEngineResult(searchEngineItems.PlaceFrom, searchEngineItems.PlaceTo, searchEngineItems.DateRide);
-
-            //TODO;
-            //1. Dopisac nazwy kolumne
-            //2. Ostylować wszystko
-            //3. Dopisac nr telefonu i description
-            //4. Zoptymalizowac wyszukiwanie na zmniejszenie wszystkich wpisanych liter
-            
 
             string html = "";
             html += "<table class=\"searchResultTable\">";
@@ -98,16 +87,16 @@ namespace GoWithMe
                 html += "<li> Car model:" + item.CarModel + "</li></td>";
 
                 //------------------------ PHONE NUMEBR CONTACT -------------------------------------------
-                html += "<td><ul class=\"phoneNumberCollumn\"> <li>" + "Telefon kontaktowy:"  + "</li>";
+                html += "<td><ul class=\"phoneNumberCollumn\"> <li>" + "Contact phone:"  + "</li>";
                 html += "<li>" + GwmExtras.ChangeNumberFormat(item.PhoneNumber) +  "</li></td>";
 
                 //------------------------ DESCRIPTION ----------------------------------------------------
-                html += "<td><ul> <li>" + "Opis przejazdu:" + "</li>";
+                html += "<td><ul> <li>" + "Offert description:" + "</li>";
                 html += "<li class=\"descriptionCollumn\">" + item.Description + "</li></td>";
 
                 //------------------------ PRICE AND NUMBER OF SITS ---------------------------------------
-                html += "<td><ul> <li class=\"priceCollumn\">" + "Cena: " + item.Price + " zł " + "</li>";
-                html += "<li> Ilość miejsc: " + item.NumberOfSits + "</li></td>";
+                html += "<td><ul> <li class=\"priceCollumn\">" + "Price: " + item.Price + " $ " + "</li>";
+                html += "<li> Number of sits: " + item.NumberOfSits + "</li></td>";
 
 
                 html += "</tr>";
@@ -120,11 +109,3 @@ namespace GoWithMe
     }
 }
 
-
-//Image img = new Image();
-//img.ImageUrl = "/scierwo.jpg";
-//img.CssClass = "someclass";
-//img.ID = "someid";
-//img.AlternateText = "alttext";
-
-//SearchResult.Controls.Add(img);

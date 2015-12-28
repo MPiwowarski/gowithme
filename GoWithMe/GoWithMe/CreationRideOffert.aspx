@@ -19,7 +19,7 @@
     <script src="Scripts/HomeCalendar.js"></script>
 
 
-    <title>Zaoferuj swój przejazd</title>
+    <title>Create your offert</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -65,7 +65,7 @@
                                         <asp:TextBox ID="departureHourControl" runat="server" Width="40"  TextMode="Number"></asp:TextBox>
                                         <p style="display:inline;margin-bottom:30px; font-size:20px;">:</p>
                                         <asp:TextBox ID="departureMinutesControl" runat="server" Width="40"  TextMode="Number"></asp:TextBox>
-                                       <p style="display:inline;margin-bottom:10px; font-size:10px;">ustaw godzine z minutami</p>
+                                       <p style="display:inline;margin-bottom:10px; font-size:10px;">Derivate hour with minutes</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -148,17 +148,6 @@
 
         </div>
 
-        <div id="footer">
-            <ul>
-                <li><a href="#">Najtańsze przejazdy</a></li>
-                <li>/</li>
-                <li><a href="#">Newsy</a></li>
-                <li>/</li>
-                <li><a href="#">FAQ</a></li>
-                <li>/</li>
-                <li><a href="#">Mapa strony</a></li>
-            </ul>
-        </div>
 
     </form>
 </body>

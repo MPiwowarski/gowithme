@@ -13,26 +13,26 @@
     <ul>
         <li>
             <fieldset>
-                <label for="name">Od</label>
+                <label for="name">From</label>
                 <asp:TextBox ID="PlaceFromControl" runat="server" Columns="20" CssClass="field" Width="220"></asp:TextBox>
             </fieldset>
         </li>
         <li>
             <fieldset>
-                <label for="name">Do</label>
+                <label for="name">To</label>
                 <asp:TextBox ID="PlaceToControl" runat="server" Columns="20" CssClass="field" Width="220"></asp:TextBox>
             </fieldset>
         </li>
         <li>
             <fieldset>
-                <label for="name">Data</label>
+                <label for="name">Date</label>
                 <asp:TextBox ID="rideDate" runat="server" Columns="20" CssClass="field" Style="background-image: url( ../../../../Images/Calendar3.jpg );" Width="150" ></asp:TextBox>
             </fieldset>
         </li>
         <li>
             <fieldset>
                 <label for="name"></label>
-                <asp:Button ID="SearchRideBtnControl" runat="server" Text="Szukaj przejazdu" CssClass="SearchButton" OnClick="SearchRideBtnControl_Click" />
+                <asp:Button ID="SearchRideBtnControl" runat="server" Text="Search offerts" CssClass="SearchButton" OnClick="SearchRideBtnControl_Click" />
             </fieldset>
         </li>
         <li>

@@ -4,13 +4,14 @@
 <div id="MainMenu">
     <ul>
         <li runat="server"><a href="Home.aspx">Home</a></li>
-        <li><a href="Registration.aspx">Rejestracja</a></li>
-        <li id="LoginMenuItem" runat="server"><a href="LoginPanel.aspx">Zaloguj się</a></li>
+        <li><a href="Registration.aspx">Registratioin</a></li>
+        <li id="LoginMenuItem" runat="server"><a href="LoginPanel.aspx">Login</a></li>
        
-        <li><a href="#">Kontakt</a></li>
-        <li><a href="#">Pomoc</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Help</a></li>
+        <li id="UserPanelMenuItem" runat="server"><a href="UserPanel.aspx">User Panel</a></li>
         <li>
-            <asp:Button ID="LogoutMenuItem" runat="server" Text="Wyloguj się" OnClick="LogoutMenuItem_Click" CssClass="LogoutMenuItemClass"/>
+            <asp:Button ID="LogoutMenuItem" runat="server" Text="Logout" OnClick="LogoutMenuItem_Click" CssClass="LogoutMenuItemClass"/>
         </li>
     </ul>
 </div>

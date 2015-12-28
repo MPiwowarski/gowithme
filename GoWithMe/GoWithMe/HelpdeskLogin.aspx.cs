@@ -30,26 +30,26 @@ namespace GoWithMe
                 if (user.Login == null)
                 {
                     ResultControl.ForeColor = System.Drawing.Color.Red;
-                    ResultControl.Text = "Podany adres email nie istnieje w bazie serwisu";
+                    ResultControl.Text = "Given email adress doesnt exist in database";
                 }
                 else
                 {
                     string newUserPassword = repo.ResetPasswordLoginHelpdesk(user);
 
 
-                    string emailBodyMessage = "Twoj login to:\n" + user.Login + "\nNowe hasło dla twojego konta to: \n" + user.Password + "\nPozdrawiamy zespoł gowitme :)";
+                    string emailBodyMessage = "Your login is:\n" + user.Login + "\nNew password for you account is: \n" + user.Password + "\nBest wishes, gowitme team :)";
 
-                    bool isEmailSent = sendEmail("Przypomnienie loginu i reset hasła", emailProblemControl.Text, emailBodyMessage);
+                    bool isEmailSent = sendEmail("Your login and password", emailProblemControl.Text, emailBodyMessage);
 
                     if (isEmailSent == false)
                     {
                         ResultControl.ForeColor = System.Drawing.Color.Red;
-                        ResultControl.Text = "Wystapił niespodziewany błąd aplikacji.\n Skontaktuj się z administratorem serwisu";
+                        ResultControl.Text = "Unexpected aplication error appeared.\n Try to contact servis administrator";
                     }
                     else if (isEmailSent == true)
                     {
                         ResultControl.ForeColor = System.Drawing.Color.Green;
-                        ResultControl.Text = "Wiadomość z przypomnieniem twojego loginu oraz nowym hasłem do twojego konta została wysłana na podany adres email";
+                        ResultControl.Text = "Message with login and new password to your account was sent to your email address";
                         Response.AddHeader("REFRESH", "15;URL=Home.aspx");
                     }
                 }
@@ -62,23 +62,23 @@ namespace GoWithMe
                 if(user .Login== null)
                 {
                     ResultControl.ForeColor = System.Drawing.Color.Red;
-                    ResultControl.Text = "Podany adres email nie istnieje w bazie serwisu";
+                    ResultControl.Text = "Given email adress doesnt exist in database";
                 }
                 else
                 {
-                    string emailBodyMessage="Przypomnienie twojego loginu w aplikacji gowithme.net\n"+
-                                            "Twoj login to:\n"+user.Login+"Pozdrawiamy zespoł gowitme :)";
-                    bool isEmailSent= sendEmail("Przypomnienie nazwy loginu użytkownika", emailProblemControl.Text ,emailBodyMessage);
+                    string emailBodyMessage="Reminding your login name in application gowithme.net\n"+
+                                            "Your login is:\n" + user.Login + "Best wishes, gowitme team :)";
+                    bool isEmailSent= sendEmail("Reminding user login name:", emailProblemControl.Text ,emailBodyMessage);
 
                     if(isEmailSent == false)
                     {
                         ResultControl.ForeColor = System.Drawing.Color.Red;
-                        ResultControl.Text = "Wystapił niespodziewany błąd aplikacji.\n Skontaktuj się z administratorem serwisu";
+                        ResultControl.Text = "Unexpected aplication error appeared.\n Try to contact servis administrator";
                     }
                     else if(isEmailSent == true)
                     {
                         ResultControl.ForeColor = System.Drawing.Color.Green;
-                        ResultControl.Text = "Wiadomość z nazwą loginu została wysłana na podany adres email";
+                        ResultControl.Text = "Message with your login name was send to your email";
                         Response.AddHeader("REFRESH", "15;URL=Home.aspx");
                     }
                 }
@@ -90,26 +90,26 @@ namespace GoWithMe
                 if (user.Login == null)
                 {
                     ResultControl.ForeColor = System.Drawing.Color.Red;
-                    ResultControl.Text = "Podany adres email nie istnieje w bazie serwisu";
+                    ResultControl.Text = "Given email adress doesnt exist in database";
                 }
                 else
                 {
                     string newUserPassword = repo.ResetPasswordLoginHelpdesk(user);
 
 
-                    string emailBodyMessage = "Nowe hasło dla twojego konta to: \n" + user.Password + " \n Pozdrawiamy zespoł gowitme :)";
+                    string emailBodyMessage = "Nowe password for your account: \n" + user.Password + " \n Best wishes, gowitme team :)";
 
                     bool isEmailSent = sendEmail("Reset hasła", emailProblemControl.Text, emailBodyMessage);
 
                     if (isEmailSent == false)
                     {
                         ResultControl.ForeColor = System.Drawing.Color.Red;
-                        ResultControl.Text = "Wystapił niespodziewany błąd aplikacji.\n Skontaktuj się z administratorem serwisu";
+                        ResultControl.Text = "Unexpected aplication error appeared.\n Try to contact servis administrator";
                     }
                     else if (isEmailSent == true)
                     {
                         ResultControl.ForeColor = System.Drawing.Color.Green;
-                        ResultControl.Text = "Wiadomość z nowym hasłem do twojego konta została wysłana na podany adres email";
+                        ResultControl.Text = "Message with new password for your account was sent to your email";
                         Response.AddHeader("REFRESH", "15;URL=Home.aspx");
                     }
                 }
@@ -118,7 +118,7 @@ namespace GoWithMe
             
             else {
                 ResultControl.ForeColor = System.Drawing.Color.Red;
-                ResultControl.Text = "Żadne pole nie zostało wybrane";
+                ResultControl.Text = "None field was choosen";
             }
 
             

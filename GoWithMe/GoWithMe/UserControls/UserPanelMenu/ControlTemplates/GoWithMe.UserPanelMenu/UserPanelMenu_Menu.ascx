@@ -6,19 +6,16 @@
     <table>
         <tr>
             <td>
-                <a href="UserPanel.aspx">Mój profil</a>
+                <a href="UserPanel.aspx">User panel</a>
             </td>
             <td>
-                <a href="#">Moje oferty przejazdów</a>
+                <a href="#">My offerts</a>
             </td>
             <td>
-                <a href="#">Odbyte przejazdy</a>
+                <a href="CreationRideOffert.aspx">Create ride offert</a>
             </td>
             <td>
-                <a href="CreationRideOffert.aspx">Zaoferuj swój przejazd</a>
-            </td>
-            <td>
-                <a href="AddUserImage.aspx">Dodaj swoje zdjecie</a>
+                <a href="AddUserImage.aspx">Add your image</a>
             </td>
         </tr>
     </table>

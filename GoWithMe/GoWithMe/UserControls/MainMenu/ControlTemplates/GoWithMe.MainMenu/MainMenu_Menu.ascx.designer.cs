@@ -22,6 +22,15 @@ namespace GoWithMe.UserControls.MainMenu.ControlTemplates.GoWithMe.MainMenu {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoginMenuItem;
         
         /// <summary>
+        /// UserPanelMenuItem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl UserPanelMenuItem;
+        
+        /// <summary>
         /// LogoutMenuItem control.
         /// </summary>
         /// <remarks>

@@ -19,7 +19,7 @@
     <script type="text/javascript" src="jQueryFiles/jquery-ui-1.8.16.custom.min.js"></script>
 
 
-    <title>Heldesk</title>
+    <title>Helpdesk</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -34,30 +34,28 @@
 
                 <uc1:MainMenu_Menu runat="server" ID="MainMenu_Menu" />
 
-
-
                 <div id="main">
 
                     <div id="helpdeskPanel">
                         <div id="helpdeskHeader">
-                            <p>Masz problem żeby się zalogować?</p>
+                            <p>Do you have problem with login?</p>
                         </div>
                         <div id="helpdeskForm">
                             <img id="helpdeskLoginIconPicture" src="Images/HelpdeskLoginPanel/helpdeskIcon.png" />
-                            <div style=" padding-top:10px; border-bottom:1px #d8d3d3 solid;">
+                            <div style="padding-top: 10px; border-bottom: 1px #d8d3d3 solid;">
                                 <table>
                                     <tr>
                                         <td>
                                             <asp:CheckBox ID="loginProblemControl" runat="server" />
                                         </td>
-                                        <td>Nie pamiętam loginu
+                                        <td>I don't remember my login
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <asp:CheckBox ID="passwordProblemControl" runat="server" />
                                         </td>
-                                        <td>Nie pamietam hasła
+                                        <td>I don't remember my password
                                         </td>
                                     </tr>
                                     <tr>
@@ -65,11 +63,10 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div class="adressEmailContainer" >
-                                <table >
+                            <div class="adressEmailContainer">
+                                <table>
                                     <tr>
-                                        <td>
-                                            Podaj swój adres email
+                                        <td>Write your email adress
                                         </td>
                                     </tr>
                                     <tr>
@@ -79,35 +76,26 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Button ID="ContinueControl" OnClick="ContinueControl_Click" runat="server" Text="Potwierdzenie" CssClass="ContinueControl"/>
+                                            <asp:Button ID="ContinueControl" OnClick="ContinueControl_Click" runat="server" Text="Submit" CssClass="ContinueControl" />
                                         </td>
                                         <td></td>
-                                            
-                                        
+
+
                                     </tr>
-                                    <tr><td>
-                                    <asp:Label ID="ResultControl" runat="server" Text="" CssClass="ResultControl"></asp:Label></td>
-                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:Label ID="ResultControl" runat="server" Text="" CssClass="ResultControl"></asp:Label></td>
+                                    </tr>
                                 </table>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-           
-        <div id="footer">
-            <ul>
-                <li><a href="#">Najtańsze przejazdy</a></li>
-                <li>/</li>
-                <li><a href="#">Newsy</a></li>
-                <li>/</li>
-                <li><a href="#">FAQ</a></li>
-                <li>/</li>
-                <li><a href="#">Mapa strony</a></li>
-            </ul>
-        </div>
+
+
         </div>
     </form>
 </body>

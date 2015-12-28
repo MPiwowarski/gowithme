@@ -48,7 +48,7 @@ namespace GoWithMe
                 ITblUserRepository repo = new TblUserRepository();
                 if (repo.SearchIfGivenLoginAlreadyExists(Login))
                 {
-                    statusControl.Text = "Login o podanej nazwie już istnieje w bazie danych!";
+                    statusControl.Text = "Given login already exists in database!";
                     statusControl.ForeColor = System.Drawing.Color.Red;
                 }
                 else
@@ -66,7 +66,7 @@ namespace GoWithMe
 
                     ClearForm();
 
-                    statusControl.Text = "Rejestracja zakończona pomyślnie!";
+                    statusControl.Text = "Registration passed succedfully!";
                     statusControl.ForeColor = System.Drawing.Color.Green;
                     Response.AddHeader("REFRESH", "1;URL=LoginPanel.aspx");
                 }
@@ -113,19 +113,6 @@ namespace GoWithMe
 
         #endregion
 
-        protected void LoginBtnControl_Click(object sender, EventArgs e)
-        {
-            ITblUserRepository repo = new TblUserRepository();
-            if (repo.TryToLogIn(LoginTryControl.ToString(),PasswordTryControl.ToString()))
-            {
-                LoginResultInfoLblControl.ForeColor = System.Drawing.Color.Green;
-                LoginResultInfoLblControl.Text = "Login i hasło prawidłowe";
-            }
-            else
-            {
-                LoginResultInfoLblControl.ForeColor = System.Drawing.Color.Red;
-                LoginResultInfoLblControl.Text = "Wprowadzone dane są nieparwidłowe";
-            }
-        }
+       
     }
 }

@@ -6,8 +6,6 @@
 <%@ Register Src="~/UserControls/MainMenu/ControlTemplates/GoWithMe.MainMenu/MainMenu_Menu.ascx" TagPrefix="uc1" TagName="MainMenu_Menu" %>
 
 
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,7 +18,7 @@
     <script type="text/javascript" src="jQueryFiles/jquery-1.6.4.min.js"></script>
     <script type="text/javascript" src="jQueryFiles/jquery-ui-1.8.16.custom.min.js"></script>
 
-    <title>Panel urzytkownika</title>
+    <title>Add image</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -41,8 +39,8 @@
 
                         <div id="uploadImgPanel">
                             <p>
-                                Dodaj tutaj swoje zdjęcie profilowe! Dzięki temu inni użytkownicy zobaczą, z kim będą podróżować, 
-                              a Ty łatwiej znajdziesz współpasażerów. Poza tym zdjęcia pomagają się wzajemnie rozpoznać na początku podróży. 
+                                Add your profile picture here! It helps other users to see with whom will they drive. 
+                                Images helps to recognise people during meeting before ride.
                             </p>
                             <table>
                                 <tr>
@@ -53,7 +51,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Button ID="SaveImageControl" runat="server" Text="Zapisz zdjęcie" OnClick="SaveImageControl_Click" />
+                                        <asp:Button ID="SaveImageControl" runat="server" Text="Save image" OnClick="SaveImageControl_Click" />
                                     </td>
                                     <td>
                                         <asp:Label ID="StatusLabelControl" runat="server" Text=""></asp:Label>
@@ -63,7 +61,7 @@
                             <img src="Images/AddUserImage/ZasadyZamieszczaniaZdjec.bmp" />
                         </div>
                         <div id="actuallImage">
-                            <h4>Twoje aktualne zdjęcie:</h4>
+                            <h4>Your actuall photo:</h4>
                             <asp:Image ID="ActualUserImage" runat="server" CssClass="actualImg"/>
                         </div>
                     </div>
@@ -73,17 +71,6 @@
 
         </div>
 
-        <div id="footer">
-            <ul>
-                <li><a href="#">Najtańsze przejazdy</a></li>
-                <li>/</li>
-                <li><a href="#">Newsy</a></li>
-                <li>/</li>
-                <li><a href="#">FAQ</a></li>
-                <li>/</li>
-                <li><a href="#">Mapa strony</a></li>
-            </ul>
-        </div>
 
     </form>
 </body>

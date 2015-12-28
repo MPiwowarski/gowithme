@@ -34,49 +34,7 @@
 </head>
 <body>
     <form id="form2" runat="server">
-        <div id="lightBox" class="blackBackground" runat="server">
-            <div class="whiteFrame">
-                <table class="loginFormTable">
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label1" runat="server" Text="Login:" CssClass="loginFormLabel"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="LoginTryControl" runat="server" CssClass="loginFormField"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label2" runat="server" Text="Hasło:" CssClass="loginFormLabel"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="PasswordTryControl" runat="server" CssClass="loginFormField"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="closeLoginFormButton" onclick="hideLightbox()">
-                                <p>Zamknij</p>
-                            </div>
-                        </td>
-                        <td>
-                            <asp:Button ID="LoginBtnControl" OnClick="LoginBtnControl_Click" runat="server" Text="Zaloguj" CssClass="loginFormButton" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="LoginResultInfoLblControl" runat="server" Text=""></asp:Label>
-                        </td>
-                    </tr>
-                </table>
-
-
-            </div>
-        </div>
+   
 
 
         <div id="wrapper">
@@ -94,12 +52,12 @@
             <div id="main">
 
                 <div class="left" style="width: 60%">
-                    <h3>Zarejestruj się i dołącz do nas!</h3>
+                    <h3>Register and join us!</h3>
                     <div id="registrationPanel">
                         <table>
                             <tr>
                                 <td colspan="2">
-                                    <h2>Rejestracja użytkownika</h2>
+                                    <h2>Registration panel</h2>
                                 </td>
                             </tr>
                             <tr>
@@ -111,11 +69,11 @@
                                     </asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail"
                                         runat="server" ForeColor="Red"
-                                        ErrorMessage="Pole 'Email' jest wymagane."
+                                        ErrorMessage="Field 'Email' is required."
                                         ControlToValidate="emailControl" Display="Dynamic" Text="*">
                                     </asp:RequiredFieldValidator>
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail"
-                                        runat="server" ErrorMessage="Podany adres email jest nieprawidłowy."
+                                        runat="server" ErrorMessage="Given email is wrong."
                                         ControlToValidate="emailControl" ForeColor="Red"
                                         ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
                                         Text="*">
@@ -131,40 +89,40 @@
                                     </asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorLogin"
                                         runat="server" ForeColor="Red"
-                                        ErrorMessage="Pole 'Login' jest wymagane."
+                                        ErrorMessage="Field 'Login' is required."
                                         ControlToValidate="loginControl" Display="Dynamic" Text="*">
                                     </asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label class="registrationPanelLabels">Hasło</label>
+                                    <label class="registrationPanelLabels">Password</label>
                                 </td>
                                 <td>
                                     <asp:TextBox ID="passwordControl" runat="server" CssClass="registrationPanelFields"
                                         TextMode="Password"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword"
                                         runat="server" ForeColor="Red"
-                                        ErrorMessage="Pole 'Hasło' jest wymagane."
+                                        ErrorMessage="field 'Password' is required."
                                         ControlToValidate="passwordControl" Display="Dynamic" Text="*">
                                     </asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label class="registrationPanelLabels">Potwierdź hasło</label>
+                                    <label class="registrationPanelLabels">Confirm password</label>
                                 </td>
                                 <td>
                                     <asp:TextBox ID="confirmPasswordControl" runat="server" TextMode="Password"
                                         CssClass="registrationPanelFields"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorConfirmPassword"
                                         runat="server" ForeColor="Red"
-                                        ErrorMessage="Pole 'Potwierdź hasło' jest wymagane."
+                                        ErrorMessage="Field 'Submit password' is required."
                                         ControlToValidate="confirmPasswordControl" Display="Dynamic" Text="*">
                                     </asp:RequiredFieldValidator>
 
                                     <asp:CompareValidator ID="CompareValidatorPassword" runat="server"
-                                        ErrorMessage="Hasła nie zgadzają się."
+                                        ErrorMessage="Passwords are not the same."
                                         ControlToValidate="confirmPasswordControl" ControlToCompare="passwordControl"
                                         Operator="Equal" Type="String" ForeColor="Red" Text="*">
                                     </asp:CompareValidator>
@@ -172,14 +130,14 @@
                             </tr>
                             <tr style="border-top: solid black 3px">
                                 <td>
-                                    <label class="registrationPanelLabels">Imię </label>
+                                    <label class="registrationPanelLabels">Name </label>
                                 </td>
                                 <td>
                                     <asp:TextBox ID="nameControl" runat="server" CssClass="registrationPanelFields">
                                     </asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorImie"
                                         runat="server" ForeColor="Red"
-                                        ErrorMessage="Pole 'Imie' jest wymagane."
+                                        ErrorMessage="Field 'Name' is required."
                                         ControlToValidate="nameControl" Display="Dynamic" Text="*">
                                     </asp:RequiredFieldValidator>
                                 </td>
@@ -187,21 +145,21 @@
 
                             <tr>
                                 <td>
-                                    <label class="registrationPanelLabels">Nazwisko </label>
+                                    <label class="registrationPanelLabels">Surname </label>
                                 </td>
                                 <td>
                                     <asp:TextBox ID="surnameControl" runat="server" CssClass="registrationPanelFields">
                                     </asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
                                         runat="server" ForeColor="Red"
-                                        ErrorMessage="Pole 'Nazwisko' jest wymagane."
+                                        ErrorMessage="Field 'Surname' is required."
                                         ControlToValidate="surnameControl" Display="Dynamic" Text="*">
                                     </asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label class="registrationPanelLabels">Numer telefonu </label>
+                                    <label class="registrationPanelLabels">Phone number </label>
                                 </td>
                                 <td>
                                     <asp:ScriptManager ID="ScriptMan1" runat="server">
@@ -210,7 +168,7 @@
                                         <asp:TextBox ID="phoneNumberControl" runat="server" CssClass="registrationPanelFields"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorNumerTelefonu"
                                             runat="server" ForeColor="Red"
-                                            ErrorMessage="Pole 'Numer telefonu' jest wymagane."
+                                            ErrorMessage="Field 'Phone number' is required"
                                             ControlToValidate="phoneNumberControl" Display="Dynamic" Text="*">
                                         </asp:RequiredFieldValidator>
 
@@ -230,18 +188,18 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:Button ID="ClearFormControl" runat="server" Text="Wyczyść formularz" CssClass="button" OnClick="ClearFormControl_Click" CausesValidation="False" />
+                                    <asp:Button ID="ClearFormControl" runat="server" Text="Clear form" CssClass="button" OnClick="ClearFormControl_Click" CausesValidation="False" />
 
                                 </td>
                                 <td colspan="2">
-                                    <asp:Button ID="RegisterBtnControl" runat="server" Text="Zarejestruj" CssClass="button" OnClick="RegisterBtnControl_Click" />
+                                    <asp:Button ID="RegisterBtnControl" runat="server" Text="REGISTER" CssClass="button" OnClick="RegisterBtnControl_Click" />
 
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
                                     <asp:ValidationSummary ID="ValidationSummary1" runat="server"
-                                        ForeColor="Red" HeaderText="REJESTRACJA NIE POWIODŁA SIĘ:" ShowMessageBox="False"
+                                        ForeColor="Red" HeaderText="REGISTRATION FAILED:" ShowMessageBox="False"
                                         ShowSummary="true" DisplayMode="List" />
                                 </td>
                             </tr>
@@ -262,13 +220,13 @@
                 </div>
 
                 <div class="right" style="width: 35%">
-                    <h3>Zobacz sam!</h3>
+                    <h3>Just see!</h3>
                     <img src="img/tapeta3.png" id="banner" />
-                    <p><a href="Home.aspx" class="btn">Zobacz więcej &raquo;</a></p>
+                    <p><a href="Home.aspx" class="btn">See more! &raquo;</a></p>
                 </div>
                 <div class="right" style="width: 35%;">
                     <img src="img/TerazZawszeBaner.png" id="banner2" />
-                    <p><a href="Home.aspx" class="btn">Zobacz więcej &raquo;</a></p>
+                    <p><a href="Home.aspx" class="btn">See more! &raquo;</a></p>
                 </div>
 
                 <br class="clearit" />
@@ -277,17 +235,7 @@
 
         </div>
 
-        <div id="footer">
-            <ul>
-                <li><a href="#">Najtańsze przejazdy</a></li>
-                <li>/</li>
-                <li><a href="#">Newsy</a></li>
-                <li>/</li>
-                <li><a href="#">FAQ</a></li>
-                <li>/</li>
-                <li><a href="#">Mapa strony</a></li>
-            </ul>
-        </div>
+    
     </form>
 </body>
 </html>

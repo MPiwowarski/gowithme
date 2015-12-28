@@ -22,7 +22,7 @@ namespace GoWithMe
             if (repo.TryToLogIn(LoginTryControl.Text,PasswordTryControl.Text))
             {
                 ResultTryLogin.ForeColor = System.Drawing.Color.Green;
-                ResultTryLogin.Text = "Jesteś zalogowany";
+                ResultTryLogin.Text = "You are login";
 
                 Session["UserId"]= (repo.GetUserByGivenLogin(LoginTryControl.Text).ID).ToString();
                
@@ -31,7 +31,7 @@ namespace GoWithMe
             else
             {
                 ResultTryLogin.ForeColor = System.Drawing.Color.Red;
-                ResultTryLogin.Text = "Wprowadzone dane są nieprawidłowe";
+                ResultTryLogin.Text = "Data is not correct";
             }
 
         }

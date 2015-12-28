@@ -68,7 +68,7 @@ namespace GoWithMe
                     repo.AddNewImage(image);
 
                     StatusLabelControl.ForeColor = System.Drawing.Color.Green;
-                    StatusLabelControl.Text = "Zdjęcie zapisano pomyślnie";
+                    StatusLabelControl.Text = "Image is saved succesfully";
 
                     LoadActualUserImage();
 
@@ -79,13 +79,13 @@ namespace GoWithMe
                 catch (Exception ex)
                 {
                     StatusLabelControl.ForeColor = System.Drawing.Color.Red;
-                    StatusLabelControl.Text = "Nieoczekiwany bład przy zapisie";
+                    StatusLabelControl.Text = "Unexpected error during saving";
                 }
             }
             else
             {
                 StatusLabelControl.ForeColor = System.Drawing.Color.Red;
-                StatusLabelControl.Text = "Prosze załadować swoje zdjęcie";
+                StatusLabelControl.Text = "Please upload your image";
             }
         }
     }

@@ -22,7 +22,7 @@ namespace GoWithMe
 
             if (userId == null)
             {
-                //Response.Redirect("Home.aspx");
+                Response.Redirect("Home.aspx");
             }
             
         }
