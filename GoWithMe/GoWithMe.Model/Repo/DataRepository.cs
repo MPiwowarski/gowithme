@@ -27,7 +27,7 @@ namespace GoWithMe.Model.Repo
                o => o.tblUserId,
                (u, o) => new { u, o }).
 
-               Where(s => s.o.FromPlace == fromPlace && s.o.ToPlace == toPlace).
+               Where(s => s.o.FromPlace == fromPlace && s.o.ToPlace == toPlace && s.o.RideDate > rideDate && s.o.RideDate > DateTime.Now ).
                Select(s => new searchEngineResult
                {
                    UserId = s.u.ID,

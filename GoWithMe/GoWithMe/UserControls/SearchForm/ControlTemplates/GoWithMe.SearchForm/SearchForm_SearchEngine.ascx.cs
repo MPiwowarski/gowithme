@@ -15,15 +15,15 @@ namespace GoWithMe.SearchForm
     {
         public event EventHandler LoadSearchEngine;
 
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void InitSearchEngineComponents()
         {
-           
+
         }
 
         public void ClearForm()
@@ -34,7 +34,7 @@ namespace GoWithMe.SearchForm
         }
 
         public SearchFormItem SearchData
-        {               
+        {
             get
             {
                 if (Session["GetSearchDataVS"] != null)
@@ -70,12 +70,12 @@ namespace GoWithMe.SearchForm
         {
             get
             {
-                if(rideDate.Text != "")
-                {                 
-                    
+                if (rideDate.Text != "")
+                {
+
                     IExtrasModel extrasModel = new ExtrasModel();
 
-                    rideDate.Text=rideDate.Text.ToString().Replace('-', '/');
+                    rideDate.Text = rideDate.Text.ToString().Replace('-', '/');
                     return extrasModel.AddDepartureHourToRideDate("00", "00", DateTime.ParseExact(rideDate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture));
                 }
                 else
@@ -83,7 +83,7 @@ namespace GoWithMe.SearchForm
                     return null;
                 }
             }
-           
+
         }
 
         public string DateRideCtrl
@@ -102,7 +102,7 @@ namespace GoWithMe.SearchForm
             set
             {
                 if (value != "")
-                { 
+                {
                     rideDate.Text = Convert.ToDateTime(value).ToString("dd/MM/yyyy");
                 }
             }
@@ -151,17 +151,17 @@ namespace GoWithMe.SearchForm
                 SearchStatusControlText = "write ride date";
                 return false;
             }
+            if (DateRide < DateTime.Now)
+            {
+                SearchStatusControlText = "wrong date";
+                return false;
+            }
             else
             {
                 return true;
-            }
-            //zdisablowac pole daty w wyszukiwarce!!!!
-            //Walidacaja daty powinna byc ustawiona na bool i dodatkowo przechowywana w VS. Jezeli jest false to nie ma przekierowania 
-            // na strone z wynikami wyszukiwania. Dodatkowo na stronie z wynikami wyszukiwania VS jest sprawdzany czy jest nullem
-            // jezeli jest nullem to przekierowanie na HOme.aspx
+            }        
         }
 
-        //MIEJSCE NA DORZUCENIE WALIDATOROW I WPISANIE WYNIKU W LABEL
         protected void SearchRideBtnControl_Click(object sender, EventArgs e)
         {
             if (SearchEngineFormValidate())
@@ -169,13 +169,13 @@ namespace GoWithMe.SearchForm
                 SearchFormItem searchFormItem = new SearchFormItem();
                 searchFormItem.PlaceFrom = PlaceFrom;
                 searchFormItem.PlaceTo = PlaceTo;
-                searchFormItem.DateRide =DateRide;
+                searchFormItem.DateRide = DateRide;
 
                 SearchData = searchFormItem;
 
                 Response.Redirect("OffertsPanel.aspx");
             }
-            
+
         }
     }
 
