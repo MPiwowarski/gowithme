@@ -10,9 +10,9 @@ namespace GoWithMe.Model
 {
     public class GoWithMeDBContext: DbContext
     {
-        public DbSet<tblUser> Users { get; set; }
-        public DbSet<tblOfferingRide> OfferingRide { get; set; }
-        public DbSet<tblImage> Images { get; set; }
+        public virtual DbSet<tblUser> Users { get; set; }
+        public virtual DbSet<tblOfferingRide> OfferingRide { get; set; }
+        public virtual DbSet<tblImage> Images { get; set; }
 
       
     }

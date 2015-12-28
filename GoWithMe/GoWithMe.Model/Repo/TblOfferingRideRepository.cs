@@ -14,10 +14,23 @@ namespace GoWithMe.Model.Repo
 
     public class TblOfferingRideRepository : DataRepository, ITblOfferingRideRepository
     {
+        private GoWithMeDBContext _context;
+
+        public TblOfferingRideRepository()
+        {
+            this._context = DBContext;
+        }
+
+        public TblOfferingRideRepository(GoWithMeDBContext context)
+        {
+            this._context = context;
+        }
+
+
         public void AddNewRideOffert(tblOfferingRide rideOffert)
         {
-            DBContext.OfferingRide.Add(rideOffert);
-            DBContext.SaveChanges();
+            _context.OfferingRide.Add(rideOffert);
+            _context.SaveChanges();
         }
     }
 }

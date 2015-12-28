@@ -26,27 +26,32 @@ namespace GoWithMe.Model.Repo
 
     public class TblUserRepository: DataRepository, ITblUserRepository
     {
-        
+        private GoWithMeDBContext _context;
         public TblUserRepository()
         {
-            
+            _context = DBContext;
         }
+        public TblUserRepository(GoWithMeDBContext context)
+        {
+            _context = context;
+        }
+        
 
         public List<tblUser> GetUsers()
         {
-            return DBContext.Users.ToList();
+            return _context.Users.ToList();
         }
 
         public void AddNewUser(tblUser newUser)
         {
-            DBContext.Users.Add(newUser);
-            DBContext.SaveChanges();
+            _context.Users.Add(newUser);
+            _context.SaveChanges();
         }
 
         public bool SearchIfGivenLoginAlreadyExists(string login)
         {
             tblUser user = new tblUser();
-            user = DBContext.Users.Where(x => x.Login == login).Select(x => x).FirstOrDefault();
+            user = _context.Users.Where(x => x.Login == login).Select(x => x).FirstOrDefault();
 
             if (user != null)
             { return true; }
@@ -57,7 +62,7 @@ namespace GoWithMe.Model.Repo
         public bool TryToLogIn(string login, string password)
         {
             tblUser user = new tblUser();
-            user = DBContext.Users.Where(x => x.Login == login).Select(x => x).FirstOrDefault();
+            user = _context.Users.Where(x => x.Login == login).Select(x => x).FirstOrDefault();
 
             if (user != null && user.Password == password)
             {
@@ -70,7 +75,7 @@ namespace GoWithMe.Model.Repo
         public tblUser GetUserByGivenEmailAddress(string email)
         {
             tblUser user = new tblUser();
-            user = DBContext.Users.Where(x => x.Email == email).Select(x => x).FirstOrDefault();
+            user = _context.Users.Where(x => x.Email == email).Select(x => x).FirstOrDefault();
             return user;
         }
 
@@ -79,13 +84,13 @@ namespace GoWithMe.Model.Repo
             IExtrasModel extras = new ExtrasModel();
              
             string newRandomPassword = extras.CreatePassword(10);
-            DBContext.Users.Attach(updatedUser);
+            _context.Users.Attach(updatedUser);
 
             updatedUser.Password = newRandomPassword;
-            var entry = DBContext.Entry(updatedUser);
+            var entry = _context.Entry(updatedUser);
             entry.Property(e => e.Password).IsModified = true;
             // other changed properties
-            DBContext.SaveChanges();
+            _context.SaveChanges();
 
             return newRandomPassword;
         }
@@ -95,22 +100,22 @@ namespace GoWithMe.Model.Repo
         public tblUser GetUserByGivenLogin(string login)
         {
             tblUser user = new tblUser();
-            user = DBContext.Users.Where(x => x.Login == login).Select(x => x).FirstOrDefault();
+            user = _context.Users.Where(x => x.Login == login).Select(x => x).FirstOrDefault();
             return user;
         }
 
         public void UpdateUserData(tblUser updatedUser)
         {
-            var original = DBContext.Users.Find(updatedUser.ID);
+            var original = _context.Users.Find(updatedUser.ID);
 
-            DBContext.Entry(original).CurrentValues.SetValues(updatedUser);
-            DBContext.SaveChanges();
+            _context.Entry(original).CurrentValues.SetValues(updatedUser);
+            _context.SaveChanges();
         }
 
         public tblUser GetUserById(int userId)
         {
             tblUser user = new tblUser();
-            user = DBContext.Users.Where(x => x.ID == userId).Select(x => x).FirstOrDefault();
+            user = _context.Users.Where(x => x.ID == userId).Select(x => x).FirstOrDefault();
             return user;
         }
     }
