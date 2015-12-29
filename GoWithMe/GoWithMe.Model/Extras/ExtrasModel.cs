@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
@@ -50,6 +51,14 @@ namespace GoWithMe.Model.Extras
             phrase = phrase.Replace('ż', 'z');
 
             return phrase;            
+        }
+
+        public string encryptPhraseUsingSha256(string phrase)
+        {
+            byte[] data = System.Text.Encoding.ASCII.GetBytes(phrase);
+            data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+            String result = System.Text.Encoding.ASCII.GetString(data);
+            return result;
         }
     }
 }

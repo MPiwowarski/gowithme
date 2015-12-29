@@ -44,6 +44,8 @@ namespace GoWithMe.Model.Repo
 
         public void AddNewUser(tblUser newUser)
         {
+            ExtrasModel extrasModel = new ExtrasModel();
+            newUser.Password = extrasModel.encryptPhraseUsingSha256(newUser.Password);
             _context.Users.Add(newUser);
             _context.SaveChanges();
         }
@@ -62,6 +64,8 @@ namespace GoWithMe.Model.Repo
         public bool TryToLogIn(string login, string password)
         {
             tblUser user = new tblUser();
+            ExtrasModel extrasModel = new ExtrasModel();
+            password = extrasModel.encryptPhraseUsingSha256(password);
             user = _context.Users.Where(x => x.Login == login).Select(x => x).FirstOrDefault();
 
             if (user != null && user.Password == password)
@@ -86,7 +90,9 @@ namespace GoWithMe.Model.Repo
             string newRandomPassword = extras.CreatePassword(10);
             _context.Users.Attach(updatedUser);
 
-            updatedUser.Password = newRandomPassword;
+
+            ExtrasModel extrasModel = new ExtrasModel();
+            updatedUser.Password = extrasModel.encryptPhraseUsingSha256(newRandomPassword);
             var entry = _context.Entry(updatedUser);
             entry.Property(e => e.Password).IsModified = true;
             // other changed properties
@@ -107,6 +113,8 @@ namespace GoWithMe.Model.Repo
         public void UpdateUserData(tblUser updatedUser)
         {
             var original = _context.Users.Find(updatedUser.ID);
+            ExtrasModel extrasModel = new ExtrasModel();
+            updatedUser.Password = extrasModel.encryptPhraseUsingSha256(updatedUser.Password);
 
             _context.Entry(original).CurrentValues.SetValues(updatedUser);
             _context.SaveChanges();

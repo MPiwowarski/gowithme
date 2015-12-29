@@ -37,7 +37,7 @@ namespace GoWithMe
                     string newUserPassword = repo.ResetPasswordLoginHelpdesk(user);
 
 
-                    string emailBodyMessage = "Your login is:\n" + user.Login + "\nNew password for you account is: \n" + user.Password + "\nBest wishes, gowitme team :)";
+                    string emailBodyMessage = "Your login is:\n" + user.Login + "\nNew password for you account is: \n" + newUserPassword + "\nBest wishes, gowitme team :)";
 
                     bool isEmailSent = sendEmail("Your login and password", emailProblemControl.Text, emailBodyMessage);
 
@@ -97,7 +97,7 @@ namespace GoWithMe
                     string newUserPassword = repo.ResetPasswordLoginHelpdesk(user);
 
 
-                    string emailBodyMessage = "Nowe password for your account: \n" + user.Password + " \n Best wishes, gowitme team :)";
+                    string emailBodyMessage = "Nowe password for your account: \n" + newUserPassword + " \n Best wishes, gowitme team :)";
 
                     bool isEmailSent = sendEmail("Reset hasła", emailProblemControl.Text, emailBodyMessage);
 

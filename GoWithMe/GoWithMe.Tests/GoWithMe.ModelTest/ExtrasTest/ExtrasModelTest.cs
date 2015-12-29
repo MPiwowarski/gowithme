@@ -14,5 +14,13 @@ namespace GoWithMe.Tests.GoWithMe.ModelTest.ExtrasTest
             string result = obj.ConvertGivenPhrase("AĄććĘĘĘŻÓŁŁ");
             Assert.AreEqual("aacceeezoll", result);
         }
+
+        [TestMethod]
+        public void encryptPhraseUsingSha256Test()
+        {
+            ExtrasModel obj = new ExtrasModel();
+            string result = obj.encryptPhraseUsingSha256("passwordExample");
+            Assert.AreNotSame("passwordExample", result);
+        }
     }
 }
