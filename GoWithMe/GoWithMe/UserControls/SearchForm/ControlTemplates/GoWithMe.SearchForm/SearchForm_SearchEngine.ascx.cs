@@ -153,7 +153,7 @@ namespace GoWithMe.SearchForm
             }
             if (DateRide < DateTime.Now)
             {
-                SearchStatusControlText = "wrong date";
+                SearchStatusControlText = "wrong date-date passed";
                 return false;
             }
             else

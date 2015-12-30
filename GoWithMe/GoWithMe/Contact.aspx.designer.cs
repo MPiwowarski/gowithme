@@ -7,54 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GoWithMe.SearchForm {
+namespace GoWithMe {
     
     
-    public partial class SearchEngine {
+    public partial class Contact {
         
         /// <summary>
-        /// PlaceFromControl control.
+        /// EmailControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PlaceFromControl;
+        protected global::System.Web.UI.WebControls.TextBox EmailControl;
         
         /// <summary>
-        /// PlaceToControl control.
+        /// NameControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PlaceToControl;
+        protected global::System.Web.UI.WebControls.TextBox NameControl;
         
         /// <summary>
-        /// rideDate control.
+        /// TopicControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox rideDate;
+        protected global::System.Web.UI.WebControls.TextBox TopicControl;
         
         /// <summary>
-        /// SearchRideBtnControl control.
+        /// DescriptionControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SearchRideBtnControl;
+        protected global::System.Web.UI.WebControls.TextBox DescriptionControl;
         
         /// <summary>
-        /// SearchStatusControl control.
+        /// statusControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SearchStatusControl;
+        protected global::System.Web.UI.WebControls.Label statusControl;
+        
+        /// <summary>
+        /// AcceptBtnControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AcceptBtnControl;
     }
 }

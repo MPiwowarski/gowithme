@@ -1,16 +1,16 @@
-﻿#SearchForm_SearchEngine_rideSearch {
+﻿.rideSearch {
     float:left;
     border-bottom: 1px #e9e4e4 solid;
 }
 
-#SearchForm_SearchEngine_rideSearch ul {
+.rideSearch ul {
   float: right;
   margin: 3px 0 0 0;
   padding: 0;
   list-style: none;
 }
 
-#SearchForm_SearchEngine_rideSearch li {
+.rideSearch li {
   float: left;
   display: inline;
  
@@ -18,23 +18,10 @@
   margin: 0 0 0 16px;
   padding: 0;
 }
-#SearchForm_SearchEngine_rideSearch #SearchForm_SearchEngine_rideSearchSearchRideBtnControl{
+.rideSearch .rideSearchSearchRideBtnControl{
     margin-top:2px;
 }
 
-
-#SearchForm_SearchEngine_offerRide
-{
-    background-color:orange;
-    font-family:'Comic Sans MS';
-    font-size:20px;
-    height:40px;
-}
-
-#SearchForm_SearchEngine_offerRide:hover{
-       background-color:#01294f;
-    /*background-color:darkorange;*/
-}
 
 .SearchButton
 {
@@ -45,4 +32,8 @@
     
 
     height:40px;
+}
+
+.SearchButton:hover{
+    background-color:#f7df92;
 }

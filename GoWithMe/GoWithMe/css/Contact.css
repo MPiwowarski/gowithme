@@ -1,0 +1,55 @@
+﻿.ContactForm{
+    margin-top:70px;
+    border-top: 1px solid #9b9b9b;
+}
+
+.ContactForm h2{
+    color:#000000;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width:500px;
+    text-align: justify;
+}
+
+.ContactLabel {
+    font-family:'Comic Sans MS';
+    font-size:20px;
+}
+
+.ContactField{
+    font-family:'Comic Sans MS';
+    font-size:20px;
+    width:100%;
+}
+
+.SendMessage_ContactBtn{
+    font-family:'Comic Sans MS';
+    font-size:20px;
+}
+
+.SendMessage_ContactBtn:hover{
+    background-color:#f3f051;
+}
+
+.ContactFormContent{
+    float:left;
+    width:500px;
+    background-color:#cbc9c9;
+}
+
+.ContactFormContent table {
+    width:490px;
+}
+
+.DescriptionField{
+    width:100%;
+}
+.SendMessage_ContactBtn{
+    float:right;
+}
+.ContactBanner{
+    float:right;
+    
+}
+.ContactBanner img{
+    width:370px;
+}

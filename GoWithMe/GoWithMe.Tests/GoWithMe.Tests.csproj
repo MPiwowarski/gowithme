@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="GoWithMe.ModelTest\ExtrasTest\ExtrasModelTest.cs" />
     <Compile Include="GoWithMe.ModelTest\RepoTest\TblUserRepositoryTest.cs" />
+    <Compile Include="GoWithMeTest\GWMExtrasTest\GWMExtrasTest.cs" />
     <Compile Include="GoWithMeTest\OffertsPanelTest\OffertsPanelAspxTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

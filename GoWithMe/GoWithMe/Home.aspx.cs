@@ -1,6 +1,5 @@
-﻿using GoWithMe.SearchForm.Presenter.Home;
+﻿using GoWithMe.SearchForm.Presenter.DefaultPresenter;
 using GoWithMe.SearchForm.View;
-using GoWithMe.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +12,9 @@ namespace GoWithMe
     public partial class Home : System.Web.UI.Page
     {
         private SearchFormPresenter _searchFormPresenter;
-        private  ISearchFormView _searchFormView;
+        private ISearchFormView _searchFormView;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             _searchFormView = (ISearchFormView)SearchForm_SearchEngine;
             _searchFormPresenter = new SearchFormPresenter(_searchFormView);
             

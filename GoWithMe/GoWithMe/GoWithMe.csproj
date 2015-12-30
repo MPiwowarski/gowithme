@@ -75,8 +75,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddUserImage.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="CreationRideOffert.aspx" />
     <Content Include="css\AddUserImage.css" />
+    <Content Include="css\Contact.css" />
     <Content Include="css\CreationRideOffert.css" />
     <Content Include="css\HelpdeskPanel.css" />
     <Content Include="css\LoginForm.css" />
@@ -86,6 +88,7 @@
     <Content Include="css\UserPanel.css" />
     <Content Include="HelpdeskLogin.aspx" />
     <Content Include="Images\AddUserImage\ZasadyZamieszczaniaZdjec.bmp" />
+    <Content Include="Images\Contact\contactUs.jpg" />
     <Content Include="Images\CreationRideOffert\CreationRideOffertIcon.png" />
     <Content Include="Images\HelpdeskLoginPanel\helpdeskIcon.png" />
     <Content Include="Images\LoginPanel\HeadIcon.jpg" />
@@ -95,6 +98,7 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="OffertsPanel.aspx" />
     <Content Include="packages.config" />
+    <Content Include="MainTemplate.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -150,6 +154,13 @@
     <Compile Include="AddUserImage.aspx.designer.cs">
       <DependentUpon>AddUserImage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreationRideOffert.aspx.cs">
       <DependentUpon>CreationRideOffert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -181,6 +192,13 @@
     </Compile>
     <Compile Include="LoginPanel.aspx.designer.cs">
       <DependentUpon>LoginPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainTemplate.Master.cs">
+      <DependentUpon>MainTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainTemplate.Master.designer.cs">
+      <DependentUpon>MainTemplate.Master</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />

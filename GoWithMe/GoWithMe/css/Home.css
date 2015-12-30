@@ -38,3 +38,68 @@
        background-color:#01294f;
     /*background-color:darkorange;*/
 }
+.txtBoxDateRide {
+    background-image: url("~/Images/Calendar.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+
+
+.main p a, #main li a {
+  color: #111;
+  text-decoration: underline;
+}
+
+.main p a:hover, #main li a:hover {
+  color: #999;
+  text-decoration: underline;
+}
+
+.main p a.btn {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 9px;
+  background: #00a9dd;
+}
+
+.main p a:hover.btn {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 9px;
+  background: #aaa;
+}
+
+.main ul {
+  margin: 0 0 0 14px;
+  padding: 0;
+  list-style: square;
+}
+
+.main li {
+  font-size: 1.0em;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 6px 0;
+}
+
+.overview {
+  width: 920px;
+  padding: 40px 0;
+  border-top: 1px solid #e0e0e0;
+  clear: both;
+}
+
+
+.offerRide
+{
+    background-color:orange;
+    font-family:'Comic Sans MS';
+    font-size:20px;
+    height:40px;
+}
+
+.offerRide:hover{
+       background-color:#e5f325;
+    /*background-color:darkorange;*/
+}

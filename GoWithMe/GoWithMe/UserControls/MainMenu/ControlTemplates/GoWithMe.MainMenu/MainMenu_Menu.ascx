@@ -7,7 +7,7 @@
         <li><a href="Registration.aspx">Registratioin</a></li>
         <li id="LoginMenuItem" runat="server"><a href="LoginPanel.aspx">Login</a></li>
        
-        <li><a href="#">Contact</a></li>
+        <li><a href="Contact.aspx">Contact</a></li>
         <li><a href="#">Help</a></li>
         <li id="UserPanelMenuItem" runat="server"><a href="UserPanel.aspx">User Panel</a></li>
         <li>

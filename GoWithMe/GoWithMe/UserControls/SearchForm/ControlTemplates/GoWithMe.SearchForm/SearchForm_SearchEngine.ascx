@@ -9,7 +9,7 @@
 
 
 
-<div id="rideSearch" runat="server" onload="rideSearch_Load">
+<div class="rideSearch" runat="server" onload="rideSearch_Load">
     <ul>
         <li>
             <fieldset>
