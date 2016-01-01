@@ -80,12 +80,15 @@
     <Content Include="css\AddUserImage.css" />
     <Content Include="css\Contact.css" />
     <Content Include="css\CreationRideOffert.css" />
+    <Content Include="css\Help.css" />
     <Content Include="css\HelpdeskPanel.css" />
     <Content Include="css\LoginForm.css" />
     <Content Include="css\LoginPanel.css" />
+    <Content Include="css\MyOfferts.css" />
     <Content Include="css\OffertsPanel.css" />
     <Content Include="css\Registration.css" />
     <Content Include="css\UserPanel.css" />
+    <Content Include="Help.aspx" />
     <Content Include="HelpdeskLogin.aspx" />
     <Content Include="Images\AddUserImage\ZasadyZamieszczaniaZdjec.bmp" />
     <Content Include="Images\Contact\contactUs.jpg" />
@@ -95,6 +98,7 @@
     <Content Include="Images\UserPanel\UserPanelImage.png" />
     <Content Include="img\TerazZawszeBaner.png" />
     <Content Include="LoginPanel.aspx" />
+    <Content Include="MyOfferts.aspx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="OffertsPanel.aspx" />
     <Content Include="packages.config" />
@@ -172,6 +176,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GWMExtras\GwmExtras.cs" />
+    <Compile Include="Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HelpdeskLogin.aspx.cs">
       <DependentUpon>HelpdeskLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -199,6 +210,13 @@
     </Compile>
     <Compile Include="MainTemplate.Master.designer.cs">
       <DependentUpon>MainTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MyOfferts.aspx.cs">
+      <DependentUpon>MyOfferts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyOfferts.aspx.designer.cs">
+      <DependentUpon>MyOfferts.aspx</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />

@@ -45,11 +45,15 @@ namespace GoWithMe
         {
             if (Page.IsValid)
             {
+                statusControl.ForeColor = System.Drawing.Color.Red;
                 ITblUserRepository repo = new TblUserRepository();
                 if (repo.SearchIfGivenLoginAlreadyExists(Login))
                 {
-                    statusControl.Text = "Given login already exists in database!";
-                    statusControl.ForeColor = System.Drawing.Color.Red;
+                    statusControl.Text = "Given login already exists in database!";                  
+                }
+                if(repo.GetUserByGivenEmailAddress(Email).Email==Email)
+                {
+                    statusControl.Text = "Given email already exists in database!";
                 }
                 else
                 {

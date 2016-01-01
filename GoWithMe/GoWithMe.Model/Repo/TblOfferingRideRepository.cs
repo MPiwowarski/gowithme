@@ -10,6 +10,7 @@ namespace GoWithMe.Model.Repo
     public interface ITblOfferingRideRepository
     {
         void AddNewRideOffert(tblOfferingRide rideOffert);
+        void DeleteSelectedItems(List<int> ids);
     }
 
     public class TblOfferingRideRepository : DataRepository, ITblOfferingRideRepository
@@ -30,6 +31,14 @@ namespace GoWithMe.Model.Repo
         public void AddNewRideOffert(tblOfferingRide rideOffert)
         {
             _context.OfferingRide.Add(rideOffert);
+            _context.SaveChanges();
+        }
+        public void DeleteSelectedItems(List<int> ids)
+        {
+            List<tblOfferingRide> itemsToDelete = new List<tblOfferingRide>();
+            itemsToDelete = _context.OfferingRide.Where(x => ids.Contains(x.ID)).ToList();
+
+            _context.OfferingRide.RemoveRange(itemsToDelete);
             _context.SaveChanges();
         }
     }

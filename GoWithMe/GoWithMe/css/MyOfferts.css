@@ -1,0 +1,26 @@
+﻿.MyOffertsMainContainer{
+    border-top:solid 1px #d3cdcd;
+    margin-top:70px;
+}
+
+#MyOffertsForm{
+    margin-top:20px;
+
+}
+#MyOffertsForm ul li{
+    list-style-type:none;
+}
+
+.descriptionCollumn{
+    font-size:12px;
+    font-family:'Comic Sans MS';
+}
+.priceCollumn{
+    color:green;
+    font-size:20px;
+}
+.userDataCollumn, .offertDataCollumn
+{
+    font-size:14px;
+    font-family:'Comic Sans MS';
+}

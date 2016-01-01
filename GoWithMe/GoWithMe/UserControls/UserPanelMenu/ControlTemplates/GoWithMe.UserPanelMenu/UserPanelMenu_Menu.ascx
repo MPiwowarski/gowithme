@@ -9,7 +9,7 @@
                 <a href="UserPanel.aspx">User panel</a>
             </td>
             <td>
-                <a href="#">My offerts</a>
+                <a href="MyOfferts.aspx">My offerts</a>
             </td>
             <td>
                 <a href="CreationRideOffert.aspx">Create ride offert</a>

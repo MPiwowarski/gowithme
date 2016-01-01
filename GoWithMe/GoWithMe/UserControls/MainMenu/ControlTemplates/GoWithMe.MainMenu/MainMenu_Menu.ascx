@@ -8,7 +8,7 @@
         <li id="LoginMenuItem" runat="server"><a href="LoginPanel.aspx">Login</a></li>
        
         <li><a href="Contact.aspx">Contact</a></li>
-        <li><a href="#">Help</a></li>
+        <li><a href="Help.aspx">Help</a></li>
         <li id="UserPanelMenuItem" runat="server"><a href="UserPanel.aspx">User Panel</a></li>
         <li>
             <asp:Button ID="LogoutMenuItem" runat="server" Text="Logout" OnClick="LogoutMenuItem_Click" CssClass="LogoutMenuItemClass"/>

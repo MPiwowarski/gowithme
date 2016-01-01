@@ -1,0 +1,16 @@
+﻿.Help{
+    margin-top:70px;
+    border-top:1px solid #c6c3c3;
+}
+
+h1{
+    margin-top:20px;
+    color:black;
+}
+
+#QuestionsContainer h1{
+    margin-top:10px;
+    font-family:'Arial Unicode MS';
+    font-size:34px;
+    color:#c7c6c6;
+}
