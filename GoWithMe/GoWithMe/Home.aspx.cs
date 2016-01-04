@@ -1,4 +1,4 @@
-﻿using GoWithMe.SearchForm.Presenter.DefaultPresenter;
+﻿using GoWithMe.SearchForm.Presenter.Home;
 using GoWithMe.SearchForm.View;
 using System;
 using System.Collections.Generic;
@@ -18,9 +18,6 @@ namespace GoWithMe
             _searchFormView = (ISearchFormView)SearchForm_SearchEngine;
             _searchFormPresenter = new SearchFormPresenter(_searchFormView);
             
-            _searchFormPresenter.SetPlaceToWidth();
-            _searchFormPresenter.SetPlaceToWidth();
-
         }
 
         protected void offerRide_Click(object sender, EventArgs e)

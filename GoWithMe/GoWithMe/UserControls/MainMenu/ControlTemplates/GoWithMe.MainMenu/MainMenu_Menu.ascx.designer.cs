@@ -13,6 +13,15 @@ namespace GoWithMe.UserControls.MainMenu.ControlTemplates.GoWithMe.MainMenu {
     public partial class MainMenu_Menu {
         
         /// <summary>
+        /// ReigistrationControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ReigistrationControl;
+        
+        /// <summary>
         /// LoginMenuItem control.
         /// </summary>
         /// <remarks>

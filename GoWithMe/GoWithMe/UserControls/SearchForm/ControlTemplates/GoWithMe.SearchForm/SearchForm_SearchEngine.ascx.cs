@@ -132,6 +132,11 @@ namespace GoWithMe.SearchForm
             get { return Convert.ToInt32(PlaceToControl.Width); }
             set { PlaceToControl.Width = value; }
         }
+        public int SearchButtonWidth
+        {
+            get { return Convert.ToInt32(SearchRideBtnControl.Width); }
+            set { SearchRideBtnControl.Width = value; }
+        }
 
         public bool SearchEngineFormValidate()
         {

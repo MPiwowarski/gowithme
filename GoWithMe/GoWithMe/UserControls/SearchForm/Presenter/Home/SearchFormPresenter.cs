@@ -18,7 +18,9 @@ namespace GoWithMe.SearchForm.Presenter.Home
 
         public SearchFormPresenter(ISearchFormView view): base(view)
         {
-                  
+            SetPlaceFromWidth();
+            SetPlaceToWidth();
+            SetSearchButtonWidth();
         }
 
         public void SetPlaceFromWidth()
@@ -28,6 +30,10 @@ namespace GoWithMe.SearchForm.Presenter.Home
         public void SetPlaceToWidth()
         {
             _view.PlaceToWidth = 230;
+        }
+        public void SetSearchButtonWidth()
+        {
+            _view.SearchButtonWidth = 180;
         }
 
         public SearchFormItem GetSearchData()

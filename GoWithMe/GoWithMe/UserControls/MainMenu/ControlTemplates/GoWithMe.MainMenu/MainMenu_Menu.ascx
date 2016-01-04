@@ -4,7 +4,7 @@
 <div id="MainMenu">
     <ul>
         <li runat="server"><a href="Home.aspx">Home</a></li>
-        <li><a href="Registration.aspx">Registratioin</a></li>
+        <li id="ReigistrationControl" runat="server"><a href="Registration.aspx">Registratioin</a></li>
         <li id="LoginMenuItem" runat="server"><a href="LoginPanel.aspx">Login</a></li>
        
         <li><a href="Contact.aspx">Contact</a></li>

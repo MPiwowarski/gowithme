@@ -18,7 +18,8 @@ namespace GoWithMe.SearchForm.Presenter.DefaultPresenter
 
         public SearchFormPresenter(ISearchFormView view) : base(view)
         {
-
+            SetPlaceFromWidth();
+            SetPlaceToWidth();
         }
 
         public void SetPlaceFromWidth()

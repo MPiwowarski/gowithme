@@ -31,7 +31,7 @@ namespace GoWithMe.SearchForm.View
 
         int PlaceFromWidth { get; set; }
         int PlaceToWidth { get; set; }
-
+        int SearchButtonWidth { get; set; }
         
 
     }

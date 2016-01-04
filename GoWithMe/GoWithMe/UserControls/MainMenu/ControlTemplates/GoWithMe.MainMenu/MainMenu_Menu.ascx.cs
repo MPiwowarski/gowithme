@@ -16,11 +16,14 @@ namespace GoWithMe.UserControls.MainMenu.ControlTemplates.GoWithMe.MainMenu
             if (userId == null)
             {
                 LogoutMenuItem.Visible = false;
+                
                 UserPanelMenuItem.Visible = false;
+
             }
             else
             {
                 LoginMenuItem.Visible = false;
+                ReigistrationControl.Visible = false;
             }
 
 
