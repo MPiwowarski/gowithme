@@ -15,6 +15,7 @@ namespace GoWithMe.Model.Extras
 
     public class ExtrasModel:IExtrasModel
     {
+
         public string CreatePassword(int length)
         {
             const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -55,10 +56,8 @@ namespace GoWithMe.Model.Extras
 
         public string encryptPhraseUsingSha256(string phrase)
         {
-            byte[] data = System.Text.Encoding.ASCII.GetBytes(phrase);
-            data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
-            String result = System.Text.Encoding.ASCII.GetString(data);
-            return result;
+            HashingContext hashingContext = new HashingContext();
+            return hashingContext.EncryptPhrase(phrase);
         }
     }
 }

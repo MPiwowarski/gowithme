@@ -22,5 +22,7 @@ namespace GoWithMe.Tests.GoWithMe.ModelTest.ExtrasTest
             string result = obj.encryptPhraseUsingSha256("passwordExample");
             Assert.AreNotSame("passwordExample", result);
         }
+
+        
     }
 }

@@ -72,9 +72,6 @@ namespace GoWithMe
 
                     LoadActualUserImage();
 
-
-
-
                 }
                 catch (Exception ex)
                 {
