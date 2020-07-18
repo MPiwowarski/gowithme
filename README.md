@@ -1,4 +1,6 @@
 # GoWithMe
+The app was build using ASP.NET WebForms, EntityFramework; Code First, C#.
+
 Description:
 
 GoWithMe is an application created in ASP.NET WebForms technology. 
