@@ -8,6 +8,6 @@ For example, one guy is going from London to Edinburgh on date 23-03-2018. There
 take a few people with him. Of course not for free, e.g. £20 for one sit.
 In this portal, you can mainly:
 
-a). Create your own ride offer so you can optimize the costs of the travel as you will have to spent less money on fuel or
+a) Create your own ride offer so you can optimize the costs of the travel as you will have to spent less money on fuel or
 
-b). you can search for ride offers from place A to place B. This way you can save money as in general, this kind of transport is much cheaper than the public one.
+b) You can search for ride offers from place A to place B. This way you can save money as in general, this kind of transport is much cheaper than the public one.
