@@ -1,7 +1,7 @@
 # GoWithMe
 The app was build using ASP.NET WebForms, EntityFramework; Code First, C#.
 
-GoWithMe is an application created in ASP.NET WebForms technology. 
+GoWithMe is an application which gave me opportunity to make my first steps in web applications development and learn the basics. 
 It is used to create or search for rides offers. The concept is similar to the famous blablacar.com website.
 
 For example, one guy is going from London to Edinburgh on date 23-03-2018. There are 4 empty sits in his car, so he can
