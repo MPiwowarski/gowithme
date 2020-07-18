@@ -4,7 +4,7 @@ Description:
 GoWithMe is an application created in ASP.NET WebForms technology. 
 It is used to create or search for rides offers. The concept is similar to the famous blablacar.com website.
 
-For example, one guy is going from London to Edinburgh on date 12-12-2018. There are 4 empty sits in his car, so he can
+For example, one guy is going from London to Edinburgh on date 23-03-2018. There are 4 empty sits in his car, so he can
 take a few people with him. Of course not for free, e.g. £20 for one sit.
 In this portal, you can mainly:
 
