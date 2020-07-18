@@ -8,6 +8,7 @@ For example, one guy is going from London to Edinburgh on date 23-03-2018. There
 take a few people with him. Of course not for free, e.g. £20 for one sit.
 
 
+
 In this portal, you can mainly:
 
 a) Create your own ride offer so you can optimize the costs of the travel as you will have to spent less money on fuel or
